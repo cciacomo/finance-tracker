@@ -1,10 +1,12 @@
 var display = document.getElementById("display");
 var menuButton = document.getElementById("menu-button");
 var removeMenu = document.getElementById("menu");
+var balance = document.getElementById("balance");
 
 const onLoad = () => {
   menuButton.classList.add("onscreen");
   removeMenu.classList.add("remove");
+  showBalance();
 };
 window.onload = onLoad;
 
@@ -23,3 +25,13 @@ const closeMenu = () => {
   menuButton.classList.add("onscreen");
   menuButton.classList.remove("remove");
 };
+
+const showBalance = () => {
+  if (balance.classList.contains("blur")) {
+    balance.classList.remove("blur");
+  } else {
+    balance.classList.add("blur");
+  }
+};
+
+balance.onclick = showBalance;
