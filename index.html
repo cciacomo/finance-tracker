@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Finance Tracker</title>
+  </head>
+  <body>
+    <div id="display">
+      <header class="navbar">
+        <div class="navbar-left">
+          <a href="index.html"><h3>F-TRACKER</h3></a>
+        </div>
+        <div class="navbar-right">
+          <button onclick="menuInteraction()" id="menu-button">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g
+                id="SVGRepo_tracerCarrier"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></g>
+              <g id="SVGRepo_iconCarrier">
+                <path
+                  d="M4 6H20M4 12H20M4 18H20"
+                  stroke="#ededed"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+              </g>
+            </svg>
+          </button>
+        </div>
+      </header>
+      <div class="container">
+        <div class="home">
+          <div class="background">
+            <div class="balance-bar">
+              <p>Your current balance:</p>
+              <p id="balance-num">&#8364; 100</p>
+            </div>
+            <div class="buttons">
+              <div class="button-list">
+                <button class="balance-button"></button>
+              </div>
+              <div class="button-list">
+                <button class="balance-button"></button>
+              </div>
+              <div class="button-list">
+                <button class="balance-button"></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="menu">
+      <button onclick="menuInteraction()" id="remove-menu">
+        <svg
+          fill="#ededed"
+          viewBox="0 0 32 32"
+          version="1.1"
+          xmlns="http://www.w3.org/2000/svg"
+          stroke="#ededed"
+        >
+          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+          <g
+            id="SVGRepo_tracerCarrier"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          ></g>
+          <g id="SVGRepo_iconCarrier">
+            <title>cancel2</title>
+            <path
+              d="M19.587 16.001l6.096 6.096c0.396 0.396 0.396 1.039 0 1.435l-2.151 2.151c-0.396 0.396-1.038 0.396-1.435 0l-6.097-6.096-6.097 6.096c-0.396 0.396-1.038 0.396-1.434 0l-2.152-2.151c-0.396-0.396-0.396-1.038 0-1.435l6.097-6.096-6.097-6.097c-0.396-0.396-0.396-1.039 0-1.435l2.153-2.151c0.396-0.396 1.038-0.396 1.434 0l6.096 6.097 6.097-6.097c0.396-0.396 1.038-0.396 1.435 0l2.151 2.152c0.396 0.396 0.396 1.038 0 1.435l-6.096 6.096z"
+            ></path>
+          </g>
+        </svg>
+      </button>
+      <menu class="menu-bar">
+        <li><a href="">Page</a></li>
+        <li><a href="">Page</a></li>
+        <li><a href="">Page</a></li>
+        <li><a href="">Page</a></li>
+        <li><a href="">Page</a></li>
+      </menu>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
