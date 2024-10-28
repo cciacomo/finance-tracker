@@ -135,12 +135,18 @@ button {
     rgba(85, 85, 85, 1) 68%
   );
   text-align: center;
+  padding-top: 10px;
 }
 
 .balance-bar {
   padding: 50px;
   padding-top: 40px;
-  padding-bottom: 0px;
+  padding-bottom: 40px;
+  background-color: #474747;
+  border-radius: 50px;
+  margin: 50px auto;
+  margin-top: 40px;
+  max-width: 500px;
 }
 
 .balance-bar p {
@@ -178,6 +184,9 @@ button {
   -webkit-box-shadow: 0px 3px 5px 1px #3e3e3e;
   box-shadow: 0px 3px 5px 1px #3e3e3e;
   transition: box-shadow 0.25s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .balance-button:hover {
