@@ -35,3 +35,9 @@ const showBalance = () => {
 };
 
 balance.onclick = showBalance;
+
+while (true) {
+  if (document.getElementById("pin").value == "0000") {
+    window.open("home.html", "mywindow");
+  }
+}
