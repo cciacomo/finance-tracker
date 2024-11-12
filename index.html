@@ -48,7 +48,11 @@
           <div class="background">
             <div class="login">
               <p>Inserisci il tuo pin:</p>
-              <input type="password" name="pin" id="pin" />
+              <input type="password" name="pin" id="pin" maxlength="4"/> <br/>
+			  <div id="pin-buttons">
+				<button class="pin-button" id="register">Registrati</button>
+				<button class="pin-button" id="enter" onclick="Enter()">Entra</button>
+			  </div>
             </div>
           </div>
         </div>
