@@ -2,6 +2,7 @@ var display = document.getElementById("display");
 var menuButton = document.getElementById("menu-button");
 var removeMenu = document.getElementById("menu");
 var balance = document.getElementById("balance-num");
+var pin = document.getElementById("pin");
 
 const onLoad = () => {
   menuButton.classList.add("onscreen");
@@ -36,8 +37,9 @@ const showBalance = () => {
 
 balance.onclick = showBalance;
 
-while (true) {
-  if (document.getElementById("pin").value == "0000") {
-    window.open("home.html", "mywindow");
-  }
-}
+function Enter() {
+	if (pin.value == "0000")
+	{
+		window.open("home.html", "_self");
+	}
+};
