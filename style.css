@@ -302,3 +302,38 @@ circle {
     stroke-dashoffset: 110;
   }
 }
+
+.pin-button {
+	font-family: "Montserrat", sans-serif;
+	border: solid 2px #2e2e2e;
+	width: 80px;
+	height: 30px;
+	margin-top: 10px;
+	border-radius: 10px;
+	transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+#register {
+	background-color: #1e1e1e;
+	color: var(--text-color);
+}
+
+#register:hover {
+	background-color: #d4d4d4;
+	color: #1e1e1e;
+}
+
+#enter {
+	background-color: var(--text-color);
+	color: #1e1e1e;
+}
+
+#enter:hover {
+	background-color: #4e4e4e;
+	color: var(--text-color);
+}
+
+#pin-buttons {
+	display: flex;
+	justify-content: space-between;
+}
