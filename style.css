@@ -363,3 +363,12 @@ circle {
   border-radius: 20px;
   margin-right: 35px;
 }
+
+.ad h1 {
+	padding-top: 38px;
+	font-size: 3.5em;
+}
+
+.advantage {
+	border: 5px var(--darker-text-color)
+}
