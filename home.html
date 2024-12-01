@@ -10,6 +10,7 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
+    <link rel="icon" href="images/money.png" />
     <title>Finance Tracker</title>
   </head>
   <body>
@@ -49,10 +50,10 @@
           <div class="background">
             <div class="balance-bar">
               <p>Il tuo saldo</p>
-              <p id="balance-num">&#8364; 1000</p>
+              <p id="balance-num">&#8364;</p>
               <div class="buttons">
                 <div class="button-list">
-                  <button class="balance-button">
+                  <button class="balance-button" id="+" onclick="plusBttn()">
                     <svg
                       viewBox="0 0 24 24"
                       fill="none"
@@ -76,7 +77,7 @@
                   </button>
                 </div>
                 <div class="button-list">
-                  <button class="balance-button">
+                  <button class="balance-button" id="-" onclick="minusBttn()">
                     <svg
                       viewBox="0 0 24 24"
                       fill="none"
@@ -128,15 +129,15 @@
                 <h4>Spese recenti:</h4>
                 <div class="exp">
                   <p>[ Placeholder ]</p>
-                  <p class="higher">+ $1,00</p>
+                  <p class="higher">+ € 1,00</p>
                 </div>
                 <div class="exp">
                   <p>[ Placeholder ]</p>
-                  <p class="lower">- $1,00</p>
+                  <p class="lower">- € 1,00</p>
                 </div>
                 <div class="exp">
                   <p>[ Placeholder ]</p>
-                  <p class="higher">+ $30,00</p>
+                  <p class="higher">+ € 30,00</p>
                 </div>
               </div>
               <div class="savings">
@@ -178,6 +179,16 @@
               </div>
             </div>
           </div>
+        </div>
+      </div>
+    </div>
+    <div id="add-rem" class="remove">
+      <div class="add-rem-container">
+        <input id="description" type="text" placeholder="Descrizione" /> <br />
+        <input id="amount" type="number" placeholder="Somma" min="1" />
+        <div class="add-rem-buttons">
+          <button id="add" onclick="updateMoney(1)">+</button>
+          <button id="remove" onclick="updateMoney(2)">-</button>
         </div>
       </div>
     </div>

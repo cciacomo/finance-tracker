@@ -18,18 +18,18 @@
         align-items: center;
         justify-content: center;
       }
-      .login {
+      .register {
         margin-bottom: 100px;
         padding: 60px;
         padding-top: 25px;
         border-radius: 20px;
         background-color: #474747;
       }
-      .login p {
-        font-size: large;
+      .register p {
         text-align: center;
+        font-size: large;
       }
-      .login input {
+      .register input {
         border-radius: 10px;
         height: 30px;
         border: solid rgba(0, 0, 0, 0.125);
@@ -48,30 +48,18 @@
       <div class="container">
         <div class="home">
           <div class="background">
-            <div class="login">
-              <div class="input-field">
-                <p>Insterisci la tua e-mail:</p>
-                <input type="email" name="pin" id="pin" maxlength="320" />
-                <br />
-              </div>
-              <div class="input-field">
-                <p>Inserisci il tuo pin:</p>
-                <input type="password" name="pin" id="pin" maxlength="4" />
-                <br />
-              </div>
+            <div class="register">
+              <p>Scegli un pin:</p>
+              <input type="text" name="pin" id="pin">
               <div id="pin-buttons">
-                <button class="pin-button" id="register" onclick="">
-                  Registrati
-                </button>
-                <button class="pin-button" id="enter" onclick="Enter()">
-                  Entra
-                </button>
+                <button class="pin-button" id="register">Registrati</button>
+              </div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <script src="script.js" type="module"></script>
+    <script src="script.js"></script>
   </body>
 </html>
