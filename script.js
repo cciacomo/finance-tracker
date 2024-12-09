@@ -1,11 +1,11 @@
-var display = document.getElementById("display");
-var menuButton = document.getElementById("menu-button");
-var removeMenu = document.getElementById("menu");
-var pin = document.getElementById("pin");
-var balance = document.getElementById("balance-num");
+const display = document.getElementById("display");
+let menuButton = document.getElementById("menu-button");
+let removeMenu = document.getElementById("menu");
+let pin = document.getElementById("pin");
+let balance = document.getElementById("balance-num");
 
-var add = document.getElementById("+");
-var rem = document.getElementById("-");
+let add = document.getElementById("+");
+let rem = document.getElementById("-");
 
 let money = 0;
 const type = {
