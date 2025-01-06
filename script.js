@@ -4,6 +4,10 @@
 
 let recentExp = {};
 
+const goToRegister = () => {
+  window.open("register.html");
+};
+
 const Home = () => {
   document.getElementById("menu-button").classList.add("onscreen");
   document.getElementById("menu").classList.add("remove");
