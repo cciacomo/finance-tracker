@@ -32,6 +32,7 @@
       .login input {
         border-radius: 10px;
         height: 30px;
+        width: 191px;
         border: solid rgba(0, 0, 0, 0.125);
         background-color: rgba(0, 0, 0, 0.459);
       }
@@ -51,7 +52,7 @@
             <div class="login">
               <div class="input-field">
                 <p>Insterisci la tua e-mail:</p>
-                <input type="email" name="pin" id="pin" maxlength="320" />
+                <input type="email" name="e-mail" id="e-mail" maxlength="320" />
                 <br />
               </div>
               <div class="input-field">
@@ -60,10 +61,8 @@
                 <br />
               </div>
               <div id="pin-buttons">
-                <button class="pin-button" id="register" onclick="">
-                  Registrati
-                </button>
-                <button class="pin-button" id="enter" onclick="Enter()">
+                <button class="pin-button" id="register">Registrati</button>
+                <button class="pin-button" id="enter" onclick="entra()">
                   Entra
                 </button>
               </div>
@@ -72,6 +71,6 @@
         </div>
       </div>
     </div>
-    <script src="script.js" type="module"></script>
+    <script src="script.js"></script>
   </body>
 </html>

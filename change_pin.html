@@ -11,7 +11,8 @@
       rel="stylesheet"
     />
     <link rel="icon" href="images/money.png" />
-    <title>Sign up</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Cambio pin</title>
     <style>
       .background {
         display: flex;
@@ -54,14 +55,10 @@
         <div class="home">
           <div class="background">
             <div class="register">
-              <p>Inserisci un username:</p>
-              <input type="text" id="username">
-              <p>Inserisci una e-mail:</p>
-              <input type="text" name="e-mail" id="e-mail">
               <p>Scegli un pin:</p>
               <input type="password" name="pin" id="pin" maxlength="4" />
               <div id="pin-buttons">
-                <button class="pin-button" id="register" onclick="signUp()">Registrati</button>
+                <button class="pin-button" id="register" onclick="changePin()">Cambia</button>
               </div>
               </div>
             </div>

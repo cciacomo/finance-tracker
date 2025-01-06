@@ -11,20 +11,29 @@
       rel="stylesheet"
     />
     <link rel="icon" href="images/money.png" />
-    <title>Login</title>
+    <title>Account</title>
     <style>
       .background {
         display: flex;
         align-items: center;
         justify-content: space-between;
       }
+      .menu-item {
+        padding-top: 8px;
+      }
+      .item-title {
+        color: #a1a1a1;
+      }
+      .item-description {
+        padding-left: 10px;
+      }
     </style>
   </head>
-  <body>
+  <body onload="accountPage()">
     <div id="display">
       <header class="navbar">
         <div class="navbar-left">
-          <a href="index.html"><h3>LOGIN</h3></a>
+          <a href="index.html"><h3>ACCOUNT</h3></a>
         </div>
         <div class="navbar-right"></div>
       </header>
@@ -32,16 +41,20 @@
         <div class="home">
           <div class="background">
             <div class="left">
-              <img src="images/no_pfp.png" width="200px" height="200px" />
-              <hr />
               <p id="account-name">account</p>
             </div>
             <div class="right">
               <menu>
-                <div class="menu-item">
+                <li class="menu-item">
                   <p class="item-title">E-mail</p>
-                  <p class="item-description">mail@gmail.com</p>
-                </div>
+                  <p class="item-description" id="e-mail">mail@gmail.com</p>
+                </li>
+                <li class="menu-item">
+                  <p class="item-title">Pin</p>
+                  <a class="item-description" href="change_pin.html"
+                    >Cambia pin</a
+                  >
+                </li>
               </menu>
             </div>
           </div>

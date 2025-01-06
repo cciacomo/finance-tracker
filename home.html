@@ -13,7 +13,7 @@
     <link rel="icon" href="images/money.png" />
     <title>Finance Tracker</title>
   </head>
-  <body>
+  <body onload="Home()">
     <div id="display">
       <header class="navbar">
         <div class="navbar-left">
@@ -50,7 +50,7 @@
           <div class="background">
             <div class="balance-bar">
               <p>Il tuo saldo</p>
-              <p id="balance-num">&#8364;</p>
+              <p id="balance-num" onclick="showBalance()">&#8364; 0</p>
               <div class="buttons">
                 <div class="button-list">
                   <button class="balance-button" id="+" onclick="plusBttn()">
@@ -100,7 +100,7 @@
                     </svg>
                   </button>
                 </div>
-                <div class="button-list">
+                <!-- <div class="button-list">
                   <button class="balance-button">
                     <svg
                       viewBox="0 0 20 20"
@@ -121,23 +121,23 @@
                       </g>
                     </svg>
                   </button>
-                </div>
+                </div> -->
               </div>
             </div>
             <div class="bottom">
               <div class="recent-expenses">
                 <h4>Spese recenti:</h4>
                 <div class="exp">
-                  <p>[ Placeholder ]</p>
-                  <p class="higher">+ € 1,00</p>
+                  <p id="desc1">---</p>
+                  <p id="expense1">---</p>
                 </div>
                 <div class="exp">
-                  <p>[ Placeholder ]</p>
-                  <p class="lower">- € 1,00</p>
+                  <p id="desc2">---</p>
+                  <p id="expense2">---</p>
                 </div>
                 <div class="exp">
-                  <p>[ Placeholder ]</p>
-                  <p class="higher">+ € 30,00</p>
+                  <p id="desc3">---</p>
+                  <p id="expense3">---</p>
                 </div>
               </div>
               <div class="savings">
@@ -145,7 +145,7 @@
                 <div class="contents">
                   <div class="progress-bar">
                     <div class="outer"></div>
-                    <div class="inner"><p id="saved">€ 400</p></div>
+                    <div class="inner"><p id="saved">€ 0</p></div>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       version="1.1"
@@ -158,23 +158,33 @@
                           <stop offset="100%" stop-color="#c3c3c3" />
                         </linearGradient>
                       </defs>
-                      <circle cx="100" cy="100" r="87" stroke-linecap="round" />
+                      <circle
+                        id="circle"
+                        cx="100"
+                        cy="100"
+                        r="87"
+                        stroke-linecap="round"
+                      />
                     </svg>
                   </div>
                   <div class="stats">
                     <div class="stat">
                       <p class="pre-num">Obiettivo |</p>
-                      <p>€ 500</p>
+                      <p id="goalNum">€ 0</p>
                     </div>
                     <div class="stat">
                       <p class="pre-num">Percentuale |</p>
-                      <p>80 %</p>
+                      <p id="percentage">0 %</p>
                     </div>
                     <div class="stat">
                       <p class="pre-num">Rimanente |</p>
-                      <p>€ 100</p>
+                      <p id="rimanente">€ 0</p>
                     </div>
                   </div>
+                </div>
+                <div class="lower-button">
+                  <button onclick="goalPopUp()">Aggiungi obiettivo</button>
+                  <button onclick="modifyGoalPopUp()">Modifica</button>
                 </div>
               </div>
             </div>
@@ -189,6 +199,22 @@
         <div class="add-rem-buttons">
           <button id="add" onclick="updateMoney(1)">+</button>
           <button id="remove" onclick="updateMoney(2)">-</button>
+        </div>
+      </div>
+    </div>
+    <div id="objective" class="remove">
+      <div class="objective-container">
+        <input id="goal" type="number" placeholder="Somma" min="1" />
+        <div class="add-rem-buttons">
+          <button id="add" onclick="setGoal()">+</button>
+        </div>
+      </div>
+    </div>
+    <div id="modify" class="remove">
+      <div class="objective-container">
+        <input id="aggiunta" type="number" placeholder="Somma" min="1" />
+        <div class="add-rem-buttons">
+          <button id="add" onclick="modify()">+</button>
         </div>
       </div>
     </div>
@@ -216,10 +242,9 @@
         </svg>
       </button>
       <menu class="menu-bar">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="">Options</a></li>
-        <li><a href="">Account</a></li>
-        <li><a href="">Log-out</a></li>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="account.html" target="_blank">Account</a></li>
+        <li><a href="index.html">Log-out</a></li>
       </menu>
     </div>
     <script src="script.js"></script>
