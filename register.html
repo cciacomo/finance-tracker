@@ -59,8 +59,9 @@
               <p>Inserisci una e-mail:</p>
               <input type="text" name="e-mail" id="e-mail">
               <p>Scegli un pin:</p>
-              <input type="password" name="pin" id="pin" maxlength="4" />
-              <div id="pin-buttons">
+              <input type="password" inputmode="numeric" name="pin" id="pin" maxlength="4" />
+              <p id="error-message"></p>
+			  <div id="pin-buttons">
                 <button class="pin-button" id="register" onclick="signUp()">Registrati</button>
               </div>
               </div>

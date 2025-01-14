@@ -3,6 +3,7 @@
 // conserva solo stringhe, dopo posso usare JSON.parse
 
 let recentExp = {};
+let regExp = /[a-zA-Z]/g;
 
 const goToRegister = () => {
   window.open("register.html");
@@ -179,9 +180,13 @@ const signUp = () => {
     document.getElementById("e-mail").value == "" ||
     document.getElementById("pin").value == ""
   ) {
-    console.error("ERROR");
+    document.getElementById("error-message").textContent = "⚠ Inserisci tutti i parametri";
   } else {
-    localStorage.setItem("username", document.getElementById("username").value);
+	  if (regExp.test(document.getElementById("pin").value))
+	  {
+		  document.getElementById("error-message").textContent = "⚠ Un pin contiene solo numeri";
+	  } else {
+		      localStorage.setItem("username", document.getElementById("username").value);
     localStorage.setItem("e-mail", document.getElementById("e-mail").value);
     localStorage.setItem("pin", document.getElementById("pin").value);
     window.open("index.html");
@@ -189,6 +194,7 @@ const signUp = () => {
     localStorage.setItem("goal", 0);
     localStorage.setItem("goalProgress", 0);
     localStorage.setItem("recExp", JSON.stringify(recentExp));
+	  }
   }
 };
 
@@ -199,14 +205,14 @@ const entra = () => {
     document.getElementById("e-mail").value == "" ||
     document.getElementById("pin").value == ""
   ) {
-    console.error("ERROR");
+    document.getElementById("error-message").textContent = "⚠ Inserisci tutti i parametri"
   } else if (
     document.getElementById("e-mail").value == localStorage.getItem("e-mail") &&
     document.getElementById("pin").value == localStorage.getItem("pin")
   ) {
     window.open("home.html");
   } else {
-    console.error("input not right");
+    document.getElementById("error-message").textContent = "⚠ E-mail o pin errati"
   }
 };
 
